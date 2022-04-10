@@ -11,12 +11,13 @@
     height: 10vh;
   }
   form{
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
     background: rgb(233, 245, 124);
+    padding-bottom: 10px;
   }
   div{
-    margin: 20px;
+    margin: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,4 +30,5 @@
   input{
     height: 30%;
     flex: auto;
+    padding: 10px;
   }
