@@ -8,19 +8,40 @@
     <title>Events Details</title>
 </head>
 <body>
-    <form>
+    <form action="UserForm.html" method="get" target="_self">
         <header>
             <h2 style="text-align: center; padding: 20px;">Event Listeners</h2>
         </header>
         <main>
-            //UC1 - enter first name of the User
             <div>
-                <label for="text">Enter First Name: </label>
-                <input type="text" id="text" name="text" pattern="[A-Z]{1}[a-z]{2,}">
+                <label for="text">User First Name: </label>
+                <input type="text" id="text" name="text" pattern="[A-Z]{1}[a-z]{2,}" autofocus placeholder="Enter First Name"/>
                 <error-output class="text-error" id="text-error" for="text"></error-output>
             </div>
-
+            <div>
+                <label for="text">User Last Name: </label>
+                <input type="text" id="text" name="text" pattern="[A-Z]{1}[a-z]{2,}" autofocus placeholder="Enter Last Name"/>
+                <error-output class="text-error" id="text-error" for="text"></error-output>
+            </div>
+            <div>
+                <label for="text">Email: </label>
+                <input type="email" name="emailField" placeholder="Enter Email"/>
+            </div>
         </main>
     </form>
+    <script>
+        //code for input email validations using regex pattern
+        const email = document.querySelector('#email');
+        const emailError = document.querySelector('.email-error');
+        email.addEventListener('input', function () {
+            let emailRegex = RegExp("[a-zA-z0-9]+[a-zA-Z0-9-_[+]?]*[.]?[a-zA-Z0-9-_[+]?]+@[a-zA-Z0-9]+([.][a-zA-Z]{2,}){1,2}");
+            if (emailRegex.test(email.value)) {
+                emailError.textContent = "";
+            } else {
+                emailError.textContent = "Invalid Email, Please enter Valid";
+            }
+        });
+     
+    </script>
 </body>
 </html>
