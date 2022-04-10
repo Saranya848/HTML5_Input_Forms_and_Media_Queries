@@ -1,0 +1,31 @@
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    text-align: center;
+    font-weight: 20px;
+    padding: 0px;
+  }
+  header {
+    background: rgb(125, 206, 243);
+    height: 10vh;
+  }
+  form{
+    margin-left: 20%;
+    margin-right: 20%;
+    background: rgb(233, 245, 124);
+  }
+  div{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  label{
+    text-align: right;
+    width: 30%;
+    margin-right: 2%;
+  }
+  input{
+   flex: auto;
+  }
