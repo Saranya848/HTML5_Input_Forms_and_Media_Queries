@@ -32,3 +32,10 @@
     flex: auto;
     padding: 10px;
   }
+  button{
+    align-items: center;
+    margin-left: 35%;
+    width: 30%;
+    padding: 10px;
+    margin-right: 35%;
+  }
